@@ -1,0 +1,29 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+<!-- 
+ {% for file in site.static_files %}    
+    {% if file.logo %}
+        <img src="{{file.path}}" title="{{file.name}}" alt="logo" />
+    {% endif %}
+{% endfor %}  -->
+
+I learnt the below mentioned technologies at some point in time. 
+And got opportunity to implement many at works or in some personal projects.
+<br>
+
+{% for tech in site.data.technologies %}
+    <a href="{{tech.url}}" target="_blank">
+        <img src="/assets/logo/{{tech.logo}}" title="{{tech.name}}" alt="logo" />
+    </a>
+{% endfor %}
+
+<h2>Projects</h2>
+{% for project in site.data.projects %}
+<h3>{{project.name}}</h3>
+<p>{{project.description}}</p>
+{% endfor %}
+
+
